@@ -27,15 +27,22 @@ function toggleIsLiked(heart, button) {
 }
 
 function setButtonText(heart, button) {
-  if ([...heart.classList].includes('is-liked')) {
-    setTimeout(
-      () => (button.querySelector('.button__text').textContent = 'Unlike'),
-      500
-    );
+  const buttonText = button.querySelector('.button__text');
+  if (heart.classList.contains('is-liked')) {
+    setTimeout(() => {
+      buttonText.textContent = 'Unlike';
+    }, 500);
   } else {
-    setTimeout(
-      () => (button.querySelector('.button__text').textContent = 'Like'),
-      500
-    );
+    setTimeout(() => {
+      buttonText.textContent = 'Like';
+    }, 500);
   }
 }
+
+document.querySelectorAll('.card__icon-button').forEach(button => {
+  button.addEventListener('click', () => {
+    const icon = button.querySelector('.like-icon');
+    icon.classList.toggle('is-liked');
+  });
+});
+

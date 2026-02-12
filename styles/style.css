@@ -301,6 +301,38 @@
   background-color: rgba(0, 0, 0, 0.75);
 }
 
+.card__image_filter_none {
+  filter: none;
+}
+
+.card__image_filter_grayscale {
+  filter: grayscale(1);
+}
+
+.card__image_filter_saturate {
+  filter: saturate(3);
+}
+
+.card__image_filter_hue-rotate {
+  filter: hue-rotate(90deg);
+}
+
+.card__image_filter_invert {
+  filter: invert(0.8);
+}
+
+.card__image_filter_sepia {
+  filter: sepia(1);
+}
+
+.card__image_filter_blur {
+  filter: blur(5px);
+}
+
+.card__image_filter_dark-city {
+  filter: brightness(0.5) contrast(1.5) grayscale(0.7);
+}
+
 @keyframes sparks {
   0% {
     opacity: 0;

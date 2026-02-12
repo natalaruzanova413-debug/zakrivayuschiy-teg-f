@@ -1,148 +1,89 @@
-/* Опишите в этом файле все keyframes для проекта и стили анимаций иконки Like.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-*/
 .like-icon .contour {
-fill: var(--heart-contour);
+  fill: var(--contour-color);
   transition: fill 0.1s linear;
 }
 
 .like-icon .core {
-fill: transparent;
-  transition: fill 0.3s 0.03s;
+  fill: transparent;
+  transition: fill 0.3s 0.03s linear;
 }
 
 .like-icon .main-body {
- fill: transparent;
-  transition: fill 0.3s 0s;
+  fill: transparent;
+  transition: fill 0.3s linear;
 }
 
-.like-icon .sparks {
-opacity: 0;
+.like-icon:hover .core {
+  fill: var(--contour-color);
+  transition: fill 0.3s linear;
 }
 
-.card__icon-button:hover .core {
-  fill: var(--heart-hover);
-  transition-delay: 0s;
+.like-icon:hover .main-body {
+  fill: var(--contour-color);
+  transition: fill 0.3s 0.05s linear;
 }
 
-.card__icon-button:hover .main-body {
- fill: var(--heart-core);
+.like-icon:active .core {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear;
 }
 
-.card__icon-button:active .core {
- fill: var(--heart-core);
+.like-icon:active .main-body {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s 0.05s linear;
 }
 
-.card__icon-button:active .main-body {
-  fill: var(--heart-core);
-  transition-delay: 0.05s;
+.like-icon.is-liked .contour {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s 0.06s linear;
 }
 
 .like-icon.is-liked .core {
-fill: var(--heart-core);
+  fill: var(--animation-fill-color);
   transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .main-body {
-  fill: var(--heart-core);
- transition: fill 0.3s linear 0.03s;
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s 0.05s linear;
 }
 
-.like-icon.is-liked .contour {
-  fill: var(--heart-core);
-  transition: fill 0.3s linear 0.06s;
-}
-
-.like-icon.is-liked .heart {
-animation: heart-bounce 0.3s ease-in-out;
-  transform-origin: center;
+.like-icon.is-liked {
+  animation: change-scale 0.3s 0.1s ease-in;
 }
 
 .like-icon.is-liked .sparks {
-animation: sparks-fly 0.3s ease-in-out 0.3s;
-  transform-origin: center;
+  animation: change-opacity 0.3s 0.3s ease-in;
 }
 
-.like-icon:hover .core {
-  transition: fill 0.3s 0s;
+
+
+@keyframes left-right {
+  from {
+    translate: calc(-100% - 8px) -50%;
+  }
+
+  to {
+    translate: calc(-100% - 4px) -50%;
+  }
 }
 
-.like-icon:hover .main-body {
-  transition: fill 0.3s 0.05s;
+@keyframes change-opacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
-.like-icon:active .core {
-  transition: fill 0.3s 0s;
-}
-
-.like-icon:active .main-body {
-  transition: fill 0.3s 0.05s;
-}
-
-.like-icon.is-liked .core {
-  transition: fill 0.3s 0s;
-}
-
-.like-icon.is-liked .main-body {
-  transition: fill 0.3s 0.03s;
-}
-
-.like-icon.is-liked .contour {
-  transition: fill 0.3s 0.06s;
-}
-
-@keyframes scale-heart {
-  0% {
+@keyframes change-scale {
+  from {
     transform: scale(1);
   }
-  100% {
+
+  to {
     transform: scale(1.25);
-  }
-}
-
-@keyframes sparks {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(1.5);
-  }
-}
-
-@keyframes heart-bounce {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes sparks-fly {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
   }
 }

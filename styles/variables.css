@@ -31,8 +31,8 @@
       #e7e7e7 0.01%,
       #1a1a1a 100%
     );
-  --heart-contour: #000;
-  --heart-core: #FF0000;
-  --heart-main: #FF0000;
-  --heart-hover: #000;
+  --heart-main: #ff0000;
+  --heart-hover: #ff0000;
+  --contour-color: #000;
+  --animation-fill-color: rgb(255 0 0);
 }

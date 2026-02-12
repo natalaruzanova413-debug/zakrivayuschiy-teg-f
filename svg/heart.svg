@@ -1,26 +1,30 @@
-<svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="like-icon">
-  <g class="contour">
-    <path d="M6 0H3V3H6V0Z" fill="black"/>
-    <path d="M9 0H6V3H9V0Z" fill="black"/>
-    <path d="M3 3H0V6H3V3Z" fill="black"/>
-    <path d="M3 6H0V9H3V6Z" fill="black"/>
-    <path d="M3 9H0V12H3V9Z" fill="black"/>
-    <path d="M12 0H9V3H12V0Z" fill="black"/>
-    <path d="M6 12H3V15H6V12Z" fill="black"/>
-    <path d="M9 15H6V18H9V15Z" fill="black"/>
-    <path d="M12 18H9V21H12V18Z" fill="black"/>
-    <path d="M21 0H24V3H21V0Z" fill="black"/>
-    <path d="M18 0H21V3H18V0Z" fill="black"/>
-    <path d="M24 3H27V6H24V3Z" fill="black"/>
-    <path d="M24 6H27V9H24V6Z" fill="black"/>
-    <path d="M24 9H27V12H24V9Z" fill="black"/>
-    <path d="M15 0H18V3H15V0Z" fill="black"/>
-    <path d="M21 12H24V15H21V12Z" fill="black"/>
-    <path d="M18 15H21V18H18V15Z" fill="black"/>
-    <path d="M15 18H18V21H15V18Z" fill="black"/>
-    <path d="M15 3H12V6H15V3Z" fill="black"/>
-    <path d="M15 21H12V24H15V21Z" fill="black"/>
-  </g>
-  <path class="main-body" fill="transparent" d="M3 3H24V12H21V15H18V18H15V21H12V18H9V15H6V12H3V3Z" />
-  <path class="core" fill="transparent" d="M12 9H15V12H12V9Z" />
-</svg>
+<svg
+              class="like-icon"
+              width="27"
+              height="24"
+              viewBox="0 0 27 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <g class="heart">
+                <path
+                  class="contour"
+                  d="M12 6H9v3h3V6ZM15 6h-3v3h3V6ZM9 9H6v3h3V9ZM9 12H6v3h3v-3ZM9 15H6v3h3v-3ZM18 6h-3v3h3V6ZM12 18H9v3h3v-3ZM15 21h-3v3h3v-3ZM18 24h-3v3h3v-3ZM27 6h3v3h-3V6ZM24 6h3v3h-3V6ZM30 9h3v3h-3V9ZM30 12h3v3h-3v-3ZM30 15h3v3h-3v-3ZM21 6h3v3h-3V6ZM27 18h3v3h-3v-3ZM24 21h3v3h-3v-3ZM21 24h3v3h-3v-3ZM21 27h-3v3h3v-3ZM21 9h-3v3h3V9Z"
+                />
+                <path
+                  class="main-body"
+                  fill="none"
+                  d="M12 9H9v3h3V9ZM15 12h-3v3h3v-3ZM18 9h-3v3h3V9ZM12 15H9v3h3v-3ZM15 15h-3v3h3v-3ZM15 18h-3v3h3v-3ZM18 12h-3v3h3v-3ZM18 21h-3v3h3v-3ZM18 18h-3v3h3v-3ZM27 9h3v3h-3V9ZM24 9h3v3h-3V9ZM27 12h3v3h-3v-3ZM24 12h3v3h-3v-3ZM21 9h3v3h-3V9ZM27 15h3v3h-3v-3ZM24 15h3v3h-3v-3ZM24 18h3v3h-3v-3ZM21 12h3v3h-3v-3ZM21 21h3v3h-3v-3ZM21 18h3v3h-3v-3ZM21 21h-3v3h3v-3ZM21 24h-3v3h3v-3Z"
+                />
+                <path
+                  class="core"
+                  d="M18 15h-3v3h3v-3ZM21 15h3v3h-3v-3ZM21 15h-3v3h3v-3ZM21 12h-3v3h3v-3ZM21 18h-3v3h3v-3Z"
+                />
+              </g>
+              <path
+                class="sparks"
+                fill="var(--animation-fill-color)"
+                d="M36 13h3v3h-3v-3ZM27 27h3v3h-3v-3ZM18 33h3v3h-3v-3ZM9 27h3v3H9v-3ZM24 0h3v3h-3V0ZM33 3h3v3h-3V3ZM3 3h3v3H3V3ZM12 0h3v3h-3V0ZM0 13h3v3H0v-3Z"
+              />
+            </svg>

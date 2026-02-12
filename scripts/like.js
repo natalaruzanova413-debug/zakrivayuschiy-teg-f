@@ -39,9 +39,30 @@ function setButtonText(heart, button) {
   }
 }
 
-document.querySelectorAll(".card__icon-button").forEach((button) => {
-  button.addEventListener("click", () => {
-    const icon = button.querySelector(".like-icon");
-    icon.classList.toggle("is-liked");
-  });
+iconButtonArray.forEach((iconButton, index) => {
+  iconButton.onclick = () =>
+    toggleIsLiked(likeHeartArray[index], likeButtonArray[index]);
 });
+
+likeButtonArray.forEach((button, index) => {
+  button.onclick = () => toggleIsLiked(likeHeartArray[index], button);
+});
+
+function toggleIsLiked(heart, button) {
+  heart.classList.toggle('is-liked');
+  setButtonText(heart, button);
+}
+
+function setButtonText(heart, button) {
+  if ([...heart.classList].includes('is-liked')) {
+    setTimeout(
+      () => (button.querySelector('.button__text').textContent = 'Unlike'),
+      500
+    );
+  } else {
+    setTimeout(
+      () => (button.querySelector('.button__text').textContent = 'Like'),
+      500
+    );
+  }
+}

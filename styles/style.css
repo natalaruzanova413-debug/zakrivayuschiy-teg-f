@@ -1,3 +1,4 @@
+/* Базовые стили страницы */
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -7,12 +8,12 @@
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  min-height: 100vh;
   width: var(--container-width);
   margin: 0 auto;
   box-sizing: border-box;
 }
 
+/* Типографика */
 .html-tag {
   font-family: var(--accent-font);
   font-size: var(--logo-font-size);
@@ -27,6 +28,15 @@
   margin: 0;
 }
 
+.button__text {
+  font-family: var(--accent-font);
+  font-weight: var(--title-weight);
+  font-size: 14px;
+  color: #000;
+  line-height: 1;
+}
+
+/* Секции */
 .header.content-section {
   width: 375px;
   height: 327px;
@@ -50,32 +60,7 @@
   background: rgba(255, 255, 255, 0.95);
 }
 
-.card_content__title {
-  font-family: var(--main-font);
-  font-variation-settings: "wght" var(--title-weight);
-  text-align: left;
-  font-size: 18px;
-  padding-block: 25px;
-  margin: 0;
-  padding: 4px 10px;
-  width: 100%;
-  display: flex;
-  align-items: center;  
-}
-
-.card__image-container {
-  width: 100%;
-  margin-bottom: 27px;
-  height: 371px;
-}
-
-.card__image {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-  display: block;
-}
-
+/* Карточка */
 .card__content {
   font-family: var(--main-font);
   font-variation-settings: "wght" var(--text-weight);
@@ -87,161 +72,35 @@
   width: 100%;
 }
 
-.card__paragraph {
-  font-size: clamp(14px, 1.2vw, 24px);
-  padding: 25px;
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 25px;
-  padding-top: 25px;
-  padding-left: 25px;
-  padding-bottom: 0;
-}
-
-.card__paragraph:last-of-type {
-  padding-top: 0px;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-bottom: 0;
-}
-
-.card__actions {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 12px;
-  width: 100%;
-  margin: 0;
-  padding: 0 25px;
-  box-sizing: border-box;
-}
-
-.card__icon-button,
-.card__like-button {
-  background: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.card__like-button {
-  border: 2px solid #000; 
-  min-width: 130px;
-  height: 38px;
-}
-
-.card__icon-button:focus {
-  outline: none;
-}
-
-.card__icon-button:focus-visible {
-  outline: 2px solid #000;
-  outline-offset: -2px; 
-}
-
-.card__like-button:focus-visible {
-  box-shadow: 0 2 0 2px rgba(0, 0, 0, 0);
-  outline: none; 
-}
-
-.button__text {
-  font-family: "PressStart2P", cursive, sans-serif;
-  font-size: 14px;
-  color: #000;
-  line-height: 1;
-}
-
-.like-icon {
-  transform-origin: center;
-  cursor: pointer;
-}
-
-.sparks {
-  opacity: 0;
-}
-
-.card__like-button:hover {
-  background-color: #000;
-  transition: background-color 0.3s ease;
-}
-
-.card__like-button:hover .button__text {
-  color: #fff;
-}
-
-.card__icon-button:focus,
-.card__like-button:focus {
-  outline: none;
-}
-
-.card__icon-button:focus-visible,
-.card__like-button:focus-visible {
-  outline: 2px solid #000;
-  outline-offset: 4px;
-}
-
-.button__text {
-  font-family: var(--accent-font);
-  font-weight: var(--title-weight);
-  margin: 0;
-}
-
-.footer__button-text {
-  font-family: var(--accent-font);
-  font-weight: var(--title-weight);
-  font-size: 14px;
-  white-space: nowrap;
-  color: var(--accent-font);
-}
-
-.footer__icon {
-  width: 28px;
-  height: 28px;
-  fill: none;
-  stroke-width: 2;
-}
-
-.save-dialog__button  {
-  font-family: "Press Start 2P", cursive;
-  font-size: 14px;
-  text-transform: uppercase;
-}
-
-.footer {
-  display: flex;
-  justify-content: center;
-  padding: 50px 0;
-  padding-bottom: 100px;
-  background:var(--stroke-color);
-}
-
 .card__content:last-of-type {
+  margin-bottom: 0;
+}
+
+.card_content__title {
+  font-family: var(--main-font);
+  font-variation-settings: "wght" var(--title-weight);
+  text-align: left;
+  font-size: 18px;
   margin: 0;
-}
-
-.footer__save-button {
+  padding: 4px 10px;
+  width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 8px;
-  background-color: transparent;
-  border: 2px solid black;
-  padding: 15px 40px;
-  cursor: pointer;
-  width: 306px;
-  height: 84px;
 }
 
+/* Изображения в карточке */
 .card__image-container {
   position: relative;
+  width: 100%;
+  height: 371px;
+  margin-bottom: 27px;
 }
 
 .card__image {
   display: block;
   width: 100%;
+  height: auto;
+  border-radius: 4px;
 }
 
 .card__label {
@@ -262,6 +121,108 @@
     0 -1px var(--stroke-color);
 }
 
+/* Текст в карточке */
+.card__paragraph {
+  font-size: clamp(14px, 1.2vw, 24px);
+  padding: 25px 25px 0 25px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+}
+
+.card__paragraph:last-of-type {
+  padding-top: 0;
+  margin-bottom: 0;
+}
+
+/* Кнопки и действия */
+.card__actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 0 25px;
+  box-sizing: border-box;
+}
+
+.card__icon-button,
+.card__like-button,
+.footer__save-button,
+.save-dialog__button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card__like-button,
+.footer__save-button {
+  border: 2px solid #000;
+}
+
+.card__like-button {
+  min-width: 130px;
+  height: 38px;
+}
+
+.card__icon-button:focus,
+.card__like-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible,
+.card__like-button:focus-visible,
+.footer__save-button:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 4px;
+}
+
+.card__like-button:hover,
+.footer__save-button:hover {
+  background-color: #000;
+}
+
+.card__like-button:hover .button__text,
+.footer__save-button:hover .button__text,
+.footer__save-button:hover .footer__button-text {
+  color: #fff;
+}
+
+/* Футер */
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0 100px;
+  background: var(--stroke-color);
+}
+
+.footer__save-button {
+  flex-direction: column;
+  gap: 8px;
+  padding: 15px 40px;
+  width: 306px;
+  height: 84px;
+}
+
+.footer__button-text {
+  font-family: var(--accent-font);
+  font-weight: var(--title-weight);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.footer__icon {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke-width: 2;
+}
+
+/* Диалог */
 .save-dialog {
   display: none;
   padding: 30px;
@@ -275,11 +236,10 @@
   flex-direction: column;
   gap: 30px;
   position: fixed;
-  top: 255px;
-  left: 48%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 341px;
-  height: 191px;
   margin: 0;
 }
 
@@ -290,107 +250,58 @@
   align-items: center;
 }
 
-.save-dialog__text {
+.save-dialog__text,
+.save-dialog__button {
   font-family: "Press Start 2P", cursive;
   font-size: 14px;
-  line-height: 1.5;
   text-transform: uppercase;
+  line-height: 1.5;
 }
 
 .save-dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.75);
 }
 
-.card__image_filter_none {
-  filter: none;
-}
+/* Фильтры */
+.card__image_filter_grayscale { filter: grayscale(80%); }
+.card__image_filter_saturate { filter: saturate(400%); }
+.card__image_filter_hue { filter: hue-rotate(30deg); }
+.card__image_filter_inversion { filter: invert(80%); }
+.card__image_filter_sepia { filter: sepia(90%); }
+.card__image_filter_blur { filter: blur(20px); }
+.card__image_filter_custom { filter: saturate(200%) invert(30%) hue-rotate(90deg) blur(2px) grayscale(10%); }
 
-.card__image_filter_grayscale {
-  filter: grayscale(1);
-}
-
-.card__image_filter_saturate {
-  filter: saturate(3);
-}
-
-.card__image_filter_hue-rotate {
-  filter: hue-rotate(90deg);
-}
-
-.card__image_filter_invert {
-  filter: invert(0.8);
-}
-
-.card__image_filter_sepia {
-  filter: sepia(1);
-}
-
-.card__image_filter_blur {
-  filter: blur(5px);
-}
-
-.card__image_filter_dark-city {
-  filter: brightness(0.5) contrast(1.5) grayscale(0.7);
-}
+/* Анимации и прочее */
+.like-icon { transform-origin: center; cursor: pointer; }
+.sparks { opacity: 0; }
 
 @keyframes sparks {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
 }
 
 @keyframes scale-heart {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
 }
 
+/* Адаптив */
 @media (min-width: 1440px) {
-  .page {
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
-  }
-
-  .header.content-section {
-    width: 100%;
-    max-width: 700px;
-    height: auto;
-    margin: 100px auto;
-    padding-block: 100px 90px;
-  }
-
-  .content,
-  .card__content,
-  .footer {
+  .page, .header.content-section, .content, .card__content, .footer {
     width: 100%;
     max-width: 700px;
     margin-inline: auto;
   }
 
-  .card_content__title {
-    padding: 6px 12px;
+  .header.content-section {
     height: auto;
-    width: 100%;
+    padding-block: 100px 90px;
+  }
+
+  .card_content__title {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-
-  .card__image-container {
-    height: 371px;
   }
 
   .card__paragraph {
@@ -399,67 +310,29 @@
   }
 
   .card__actions {
-    justify-content: flex-end;
-    gap: 8px;
     margin-top: 25px;
   }
 
-  .card__icon-button {
-    width: 44px;
-    height: 44px;
-  }
-
-  .card__like-button {
-    min-width: 130px;
-    height: 44px;
-  }
+  .card__like-button { height: 44px; }
 
   .footer__save-button {
     flex-direction: row;
     width: auto;
     min-width: 335px;
     height: auto;
-    justify-content: center;
-    padding: 20px 20px;
-    gap: 8px;
-  }
-
-  .footer__button-text {
-    white-space: nowrap;
+    padding: 20px;
   }
 
   .save-dialog[open] {
     width: 420px;
     height: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .card__like-button,
-  .footer__save-button,
-  .save-dialog__button {
-    transition: box-shadow 0.3s ease;
-  }
-
-  .card__like-button::before,
-  .footer__save-button::before,
-  .save-dialog__button::before {
-    transition: transform 0.5s ease-in-out;
-  }
-
-  .card__icon-button {
-    transition: border-color 0.3s ease;
   }
 }
 
+/* Специфические стили заголовка */
 .card__title {
   color: #fff;
-  text-shadow:
-    1px 0 0 #000,
-    -1px 0 0 #000,
-    0 1px 0 #000,
-    0 -1px 0 #000;
+  text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000;
 }
 
 @supports (-webkit-text-stroke: 1px #000) or (text-stroke: 1px #000) {

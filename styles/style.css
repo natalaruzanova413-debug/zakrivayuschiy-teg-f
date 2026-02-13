@@ -258,12 +258,15 @@
 .card__image_filter_grayscale {
   filter: grayscale(80%);
 }
+
 .card__image_filter_saturate {
   filter: saturate(400%);
 }
+
 .card__image_filter_hue {
   filter: hue-rotate(30deg);
 }
+
 .card__image_filter_inversion {
   filter: invert(80%);
 }

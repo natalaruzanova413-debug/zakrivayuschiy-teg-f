@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Закрывающий тег</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <script src="./scripts/like.js" defer></script>
     <script src="./scripts/dialog.js" defer></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,9 +22,9 @@
   </head>
   <body class="page">
     <header class="header content-section">
-      <div class="title-h">
-        <p class="html-tag">&lt;/HTML&gt;</p>
-        <p class="tag-description">закрывающий тег</p>
+      <div class="title">
+        <h1 class="header_title">&lt;/HTML&gt;</h1>
+        <p class="header_subtitle">закрывающий тег</p>
       </div>
     </header>
     <main class="content">
@@ -544,15 +546,14 @@
           </div>
         </div>
       </section>
-    </main>
-    <footer class="footer">
-      <button class="footer__save-button" type="button">
-        <svg class="footer__icon" width="39" height="36">
+      <section class="content__save-button">
+        <div class="save-button">
+   <svg class="content__icon" width="39" height="36">
           <use href="./svg/floppy.svg"></use>
         </svg>
-        <span class="footer__button-text">Сохранить на память</span>
-      </button>
-    </footer>
+        <span class="content__button-text">Сохранить на память</span>
+        </div>
+      </section>
     <dialog class="save-dialog" id="saveDialog">
       <div class="save-dialog__container">
         <svg class="save-dialog__icon" width="39" height="36">
@@ -568,5 +569,6 @@
         <span class="button__text">OK</span>
       </button>
     </dialog>
+    </main>
   </body>
 </html>

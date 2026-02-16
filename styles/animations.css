@@ -57,17 +57,6 @@
 }
 
 
-
-@keyframes left-right {
-  from {
-    translate: calc(-100% - 8px) -50%;
-  }
-
-  to {
-    translate: calc(-100% - 4px) -50%;
-  }
-}
-
 @keyframes change-opacity {
   from {
     opacity: 0;

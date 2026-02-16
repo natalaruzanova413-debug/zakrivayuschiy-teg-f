@@ -212,6 +212,14 @@ body {
   fill: #fff;
   stroke: #fff;
   mix-blend-mode: difference;
+  font-family: var(--accent-font);
+  font-weight: var(--title-weight);
+  font-size: 14px;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: normal;
+  color: inherit;
 }
 
 .save-button:hover,
@@ -223,7 +231,7 @@ body {
 }
 
 .save-button:hover .button__text,
-.save-button:hover  {
+.save-button:hover {
   color: inherit;
 }
 
@@ -250,17 +258,6 @@ body {
   justify-content: center;
   padding: 50px 0 100px;
   background: var(--stroke-color);
-}
-
-.content__button-text {
-  font-family: var(--accent-font);
-  font-weight: var(--title-weight);
-  font-size: 14px;
-  white-space: nowrap;
-  position: relative;
-  z-index: 1;
-  mix-blend-mode: normal;
-  color: inherit;
 }
 
 .content__icon {

@@ -25,8 +25,8 @@
     repeating-linear-gradient(
       0deg,
       #d3d3d3 0px,
-      #d3d3d3 1px,
-      transparent 1px,
+      #d3d3d3 2px,
+      transparent 2px,
       transparent 2px
     ),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);

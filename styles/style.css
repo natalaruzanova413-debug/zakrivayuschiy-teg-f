@@ -123,6 +123,10 @@ body {
   margin-bottom: 25px;
 }
 
+.card__content:not(:last-of-type) {
+  margin-bottom: 50px;
+}
+
 .card__content:last-of-type {
   margin-bottom: 0;
 }
@@ -152,18 +156,18 @@ body {
 }
 
 .button {
-  all: unset; 
+  all: unset;
   box-sizing: border-box;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  background-color: #fff; 
-  border: 2px solid #000; 
+  background-color: #fff;
+  border: 2px solid #000;
   font-family: var(--accent-font);
   font-size: 14px;
-  overflow: hidden; 
+  overflow: hidden;
   transition: box-shadow 0.3s ease;
 }
 
@@ -179,7 +183,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: #000; 
+  background-color: #000;
   transform: translateX(-100%);
   transition: transform 0.5s ease-in-out;
   z-index: 0;
@@ -190,8 +194,8 @@ body {
 }
 
 .button__text {
-  color: #fff; 
-  mix-blend-mode: difference; 
+  color: #fff;
+  mix-blend-mode: difference;
   position: relative;
   z-index: 1;
   text-transform: uppercase;
@@ -224,17 +228,17 @@ body {
 }
 
 .card__icon-button:focus-visible {
-  outline: 2px solid #000; 
+  outline: 2px solid #000;
 }
 
 .card__like-button:hover::before {
-  transform: translateX(0); 
+  transform: translateX(0);
 }
 
 .save-button .content__icon {
   color: #fff;
   fill: #fff;
-  stroke: #fff;  
+  stroke: #fff;
 }
 
 .save-button {
@@ -249,7 +253,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 50px 0 100px;
-  background:#fff;
+  background: #fff;
 }
 
 .content__icon {
@@ -264,8 +268,7 @@ body {
 .save-dialog__icon {
   position: relative;
   z-index: 1;
-  mix-blend-mode: difference;
-  fill: #fff; 
+  fill: #fff;
 }
 
 .save-dialog {
@@ -276,7 +279,7 @@ body {
   max-width: 357px;
 }
 
-.save-dialog[open]::backdrop {
+.save-dialog[open] {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -300,6 +303,10 @@ body {
   font-size: 14px;
   text-transform: uppercase;
   line-height: 1.5;
+}
+
+.save-dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .card__image_filter_grayscale {

@@ -195,14 +195,6 @@ body {
   transform: translateX(0);
 }
 
-.button__text {
-  color: #fff;
-  mix-blend-mode: difference;
-  position: relative;
-  z-index: 1;
-  line-height: 1;
-}
-
 .save-dialog__button {
   padding: 12.5px 116.5px;
 }

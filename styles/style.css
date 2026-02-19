@@ -5,8 +5,8 @@ body {
 
 .page {
   min-inline-size: 320px;
-  width:100%;
-  max-width:700px;
+  width: 100%;
+  max-width: 700px;
   min-block-size: 100dvb;
   font-family: var(--main-font);
   font-variation-settings: "wght" var(--text-weight);
@@ -14,7 +14,6 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  width: var(--container-width);
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -55,7 +54,7 @@ body {
 
 .header.content-section {
   width: 100%;
-  max-width:700px;
+  max-width: 700px;
   padding: 122px 16px;
   box-sizing: border-box;
   display: flex;
@@ -131,19 +130,11 @@ body {
   box-sizing: border-box;
   line-height: 21px;
   max-width: 321px;
-  padding-bottom:25px;
+  padding-bottom: 25px;
 }
 
 .text__content {
   padding: 25px 25px 0px 25px;
-}
-
-.card__content:last-of-type {
-  margin-bottom: 0;
-}
-
-.content__save-button {
-  margin-top: 0;
 }
 
 .card__actions {
@@ -252,6 +243,7 @@ body {
   justify-content: center;
   padding: 50px 0 100px;
   background: #fff;
+  margin-top: 0;
 }
 
 .content__icon {
@@ -344,7 +336,6 @@ body {
   opacity: 0;
 }
 
-
 @media (min-width: 1440px) {
   .page {
     width: 100%;
@@ -380,7 +371,7 @@ body {
   }
 
   .card_content__title {
-  max-width: 676px;
+    max-width: 676px;
   }
 
   .card__content:last-of-type {

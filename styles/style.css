@@ -21,8 +21,8 @@ body {
 .title {
   font-family: var(--accent-font);
   text-transform: uppercase;
-  display:grid;
-  gap:20px;
+  display: grid;
+  gap: 20px;
 }
 
 .header_title {
@@ -151,8 +151,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding:0;
-  transition: outline 0.3s ease
+  padding: 0;
+  transition: outline 0.3s ease;
 }
 
 .button {
@@ -230,7 +230,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 0 0 100px;
-  background:transparent;
+  background: transparent;
   margin-top: 0;
 }
 
@@ -324,7 +324,7 @@ body {
   opacity: 0;
 }
 
-@media (min-width: 1440px)  {
+@media (min-width: 1440px) {
   .content {
     background: transparent;
     width: 100%;

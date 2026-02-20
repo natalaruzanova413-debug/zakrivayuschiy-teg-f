@@ -20,25 +20,24 @@ body {
 
 .title {
   font-family: var(--accent-font);
+  text-transform: uppercase;
+  display:grid;
+  gap:20px;
 }
 
 .header_title {
   font-family: var(--accent-font);
-  font-size: clamp(3rem, 10vw, var(--logo-font-size));
-  line-height: 1;
+  font-size: clamp(3.0625rem, 1.8943rem + 4.9844vw, 4.0625rem);
   margin: 0;
-  padding-bottom: 20px;
   text-align: center;
   word-break: break-all;
 }
 
 .header_subtitle {
   font-family: var(--accent-font);
-  font-size: var(--subtitle-font-size);
-  line-height: 1;
+  font-size: clamp(0.875rem, 0.2179rem + 2.8037vw, 1.4375rem);
   margin: 0;
   text-align: center;
-  text-transform: uppercase;
 }
 
 .button__text {
@@ -55,13 +54,13 @@ body {
 .header.content-section {
   width: 100%;
   max-width: 700px;
-  padding: 122px 16px;
+  padding: clamp(7.5rem, 6.9159rem + 2.4922vw, 8rem) 0;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background: rgba(255, 255, 255);
-  border: 2px solid rgba(0, 0, 0, 0);
+  border: 2px solid #000;
   margin: 100px auto;
 }
 
@@ -87,7 +86,6 @@ body {
   font-size: 18px;
   margin: 0;
   padding: 4px 10px;
-  max-width: 321px;
   display: flex;
   align-items: center;
 }
@@ -126,10 +124,9 @@ body {
 }
 
 .card__paragraph {
-  font-size: clamp(18px, 1.2vw, 24px);
+  font-size: 18px;
   box-sizing: border-box;
   line-height: 21px;
-  max-width: 321px;
   padding-bottom: 25px;
 }
 
@@ -154,6 +151,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding:0;
+  transition: outline 0.3s ease
 }
 
 .button {
@@ -177,8 +176,8 @@ body {
 }
 
 .button:focus-visible {
-  outline: 2px solid #000;
-  outline-offset: 2px;
+  outline: none;
+  box-shadow: 2px 2px 0px 0px #000000;
 }
 
 .button::before {
@@ -196,7 +195,8 @@ body {
 }
 
 .save-dialog__button {
-  padding: 12.5px 116.5px;
+  padding: 12.5px 5px;
+  text-align: center;
 }
 
 .card__like-button {
@@ -216,10 +216,6 @@ body {
   outline: 2px solid #000;
 }
 
-.card__like-button:hover::before {
-  transform: translateX(0);
-}
-
 .save-button {
   flex-direction: column;
   gap: 8px;
@@ -233,8 +229,8 @@ body {
 .content__save-button {
   display: flex;
   justify-content: center;
-  padding: 50px 0 100px;
-  background: #fff;
+  padding: 0 0 100px;
+  background:transparent;
   margin-top: 0;
 }
 
@@ -328,19 +324,7 @@ body {
   opacity: 0;
 }
 
-@media (min-width: 1440px) {
-  .page {
-    width: 100%;
-    max-width: 700px;
-    margin-inline: auto;
-  }
-
-  .content__save-button {
-    width: 100%;
-    max-width: 700px;
-    margin-inline: auto;
-  }
-
+@media (min-width: 1440px)  {
   .content {
     background: transparent;
     width: 100%;
@@ -349,33 +333,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 50px;
-  }
-
-  .card__paragraph {
-    max-width: 646px;
-  }
-
-  .card__content {
-    width: 100%;
-    max-width: 700px;
-    margin-inline: auto;
-    margin-bottom: 0;
-  }
-
-  .card_content__title {
-    max-width: 676px;
-  }
-
-  .card__content:last-of-type {
-    margin-bottom: 0;
-  }
-
-  .header.content-section {
-    width: 100%;
-    max-width: 700px;
-    margin-inline: auto;
-    min-height: 368px;
-    padding-block: 100px 90px;
   }
 
   .card__image-container {
@@ -388,18 +345,12 @@ body {
 
   .save-button {
     flex-direction: row;
-    width: auto;
-    min-width: 335px;
-    height: auto;
-    padding: 20px;
+    width: 335px;
+    height: 55px;
   }
 
   .save-dialog[open] {
     width: 353px;
-  }
-
-  .save-dialog__button {
-    padding: 12.5px 132.5px;
   }
 }
 

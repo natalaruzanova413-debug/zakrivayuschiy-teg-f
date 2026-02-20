@@ -1,14 +1,12 @@
 :root {
   --main-font:
-    "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    "Inter-Variable", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --accent-font:
-    "PressStart2P-Regular", system-ui, -apple-system, "Segoe UI", Roboto, Arial,
+    "PressStart2P", system-ui, -apple-system, "Segoe UI", Roboto, Arial,
     sans-serif;
   --text-weight: 410;
-  --title-weight: 400;
+  --title-weight: 715;
   --container-width: clamp(375px, 100%, 700px);
-  --logo-font-size: clamp(49px, 13.06vw, 64px);
-  --subtitle-font-size: clamp(14px, 3.73vw, 20px);
   --header-padding-top: clamp(120px, 32vw, 150px);
   --white-box-padding: 20px;
   --stroke-color: #fff;
@@ -18,16 +16,16 @@
     repeating-linear-gradient(
       90deg,
       #d3d3d3 0px,
-      #d3d3d3 1px,
-      transparent 1px,
-      transparent 2px
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
     ),
     repeating-linear-gradient(
       0deg,
       #d3d3d3 0px,
       #d3d3d3 2px,
       transparent 2px,
-      transparent 2px
+      transparent 4px
     ),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
   --heart-main: #ff0000;
